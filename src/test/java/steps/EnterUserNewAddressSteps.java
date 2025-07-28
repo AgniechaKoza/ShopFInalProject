@@ -33,10 +33,10 @@ public class EnterUserNewAddressSteps {
     @When("I sign in")
     public void signInUser() {
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.loginAs("paulpull@03.tml.waw.pl", "Paulpull");
-        Assert.assertEquals("Paul Pull", headerComponent.getLoggedUserName());
+        loginPage.loginAs("rayclay@03.tml.waw.pl", "Rayclay");
+        Assert.assertEquals("Ray Clay", headerComponent.getLoggedUserName());
         MyAccountPage myAccountPage = new MyAccountPage(driver);
-        myAccountPage.clickAddressBtn();
+        myAccountPage.clickAddressLink();
     }
 
     @And("I entered address alias {string} address {string} city {string} zip code {string} country {string} and phone {string} in Addresses section")

@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class HeaderComponent {
-    private final WebDriver driver;
+
     @FindBy(css = "[title='Log in to your customer account']")
     WebElement signInBtn;
     @FindBy(className = "account")
@@ -17,12 +17,15 @@ public class HeaderComponent {
     WebElement clothesLink;
 
     public HeaderComponent(WebDriver driver) {
-        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
     public void signInClick() {
         signInBtn.click();
+    }
+
+    public void goToAccountPage(){
+        loggedUserName.click();
     }
 
     public String getLoggedUserName() {

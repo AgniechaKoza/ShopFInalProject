@@ -6,17 +6,22 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class MyAccountPage {
-    private final WebDriver driver;
+
 
     @FindBy(xpath = "/html/body//a[@id='address-link']")
-    WebElement addressBtn;
+    WebElement addressLink;
+@FindBy(id = "history-link")
+    WebElement orderHistoryLink;
 
     public MyAccountPage(WebDriver driver) {
-        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    public void clickAddressBtn() {
-        addressBtn.click();
+    public void clickAddressLink() {
+        addressLink.click();
+    }
+
+    public void clickOrderHistoryLink(){
+        orderHistoryLink.click();
     }
 }

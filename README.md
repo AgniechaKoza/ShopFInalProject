@@ -1,2 +1,2 @@
-# ShopFInalProject
-It's my workshop project
+# ShopFinalProject
+It's my course completion project.

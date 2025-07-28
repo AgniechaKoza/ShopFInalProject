@@ -66,5 +66,14 @@ public class BuyingASweaterSteps {
         OrderConfirmationPage orderConfirmationPage = new OrderConfirmationPage(driver);
         System.out.println(orderConfirmationPage.getOrderReference());
         orderConfirmationPage.takeScreenshotOfOrderConfirmation();
+        headerComponent.goToAccountPage();
+        MyAccountPage myAccountPage = new MyAccountPage(driver);
+        myAccountPage.clickOrderHistoryLink();
+        OrderHistoryPage orderHistoryPage = new OrderHistoryPage(driver);
+        orderHistoryPage.getPaymentStatusLabel();
+        System.out.println(orderHistoryPage.getPaymentStatusLabel());
+        Assert.assertTrue("Wrong payment status", orderHistoryPage.getPaymentStatusLabel().contains("Awaiting check payment"));
+        System.out.printf("Total value in order confirmation: '%s', in order history price: '%s'%n",orderConfirmationPage.getTotalValue(), orderHistoryPage.getOrderHistoryPrice());
+        Assert.assertEquals(orderConfirmationPage.getTotalValue(), orderHistoryPage.getOrderHistoryPrice(),0.01);
     }
 }
