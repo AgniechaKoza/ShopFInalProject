@@ -35,6 +35,9 @@ To jest mój pierwszy projekt testowania aplikacji e-commerce, stworzony, aby ro
 
 ## Kontakt
 
-Jeśli masz pytania, zapraszam do kontaktu.
+Jeśli masz pytania dotyczące projektu lub chcesz się ze mną skontaktować, napisz na:
+
+📧 agnieszkakozacz@gmail.com
+
 
 *Projekt przygotowany przez początkującego testera oprogramowania.* 
